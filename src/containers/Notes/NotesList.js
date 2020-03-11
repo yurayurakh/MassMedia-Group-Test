@@ -1,13 +1,11 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {putData} from "../../actions/notes";
+import {loadData} from "../../actions/notes";
 
 function NotesList() {
 
     const dispatch = useDispatch();
-    const onClick = () => {
-        dispatch(putData())
-    }
+    const onClick = () => dispatch(loadData())
 
     return (
         <div>

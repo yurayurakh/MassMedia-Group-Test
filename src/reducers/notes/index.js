@@ -8,6 +8,7 @@ export default (state = initialState, action) => {
 
     switch(action.type){
         case PUT_DATA:
+            console.log(action.payload)
             return {
                 ...state,
                 data: action.payload

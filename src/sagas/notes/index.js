@@ -1,5 +1,5 @@
 import { takeLatest, put, call, all } from 'redux-saga/effects'
-import {PUT_DATA, putData} from "../../actions/notes";
+import {LOAD_DATA, putData} from "../../actions/notes";
 
 function fetchData () {
     return fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -13,7 +13,7 @@ function* workerLoadData () {
 
 function* Saga() {
     yield all([
-        takeLatest(PUT_DATA, workerLoadData),
+        takeLatest(LOAD_DATA, workerLoadData),
     ]);
 }
 
