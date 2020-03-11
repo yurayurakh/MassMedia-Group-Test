@@ -1,0 +1,1 @@
+export const API_HOST = 'https://massmedia-group-dd754.firebaseio.com/';
